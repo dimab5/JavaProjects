@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-03-27T10:54:28.224+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/lab3/owners/all"
+}

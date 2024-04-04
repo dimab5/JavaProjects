@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="920db537-ff7b-4e6b-a463-096301924a04" name="Changes" comment="add proj">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9f379cee-826d-4c29-a7c1-2f81078d22e8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9f379cee-826d-4c29-a7c1-2f81078d22e8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2dwwQHuddCv48RrOW2hBiJvZqcX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.V1__Init.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker.h2: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestCreateJsonReport.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in Nexign_Test_Task.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Nexign_Test_Task [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/prog/жаба лабы/NexignTestTask&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Docker&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;java.sql.Driver&quot;,
+      &quot;postgresql&quot;,
+      &quot;h2&quot;
+    ],
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;9f379cee-826d-4c29-a7c1-2f81078d22e8&quot;
+    ]
+  }
+}</component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn package" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.java in Nexign_Test_Task">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="program.Main" />
+      <module name="Nexign_Test_Task" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="V1__Init.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/db/migration/V1__Init.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="9f379cee-826d-4c29-a7c1-2f81078d22e8" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCreateJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Nexign_Test_Task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestCreateJson" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in Nexign_Test_Task" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Nexign_Test_Task" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.java in Nexign_Test_Task" />
+        <item itemvalue="Database Script.V1__Init.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-graalvm-jdk-17.0.9-f644763e9732-ba762f68" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="920db537-ff7b-4e6b-a463-096301924a04" name="Changes" comment="" />
+      <created>1710932434586</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710932434586</updated>
+      <workItem from="1710932435675" duration="17000" />
+      <workItem from="1710939356158" duration="23000" />
+      <workItem from="1710943536756" duration="9000" />
+      <workItem from="1711021065058" duration="135000" />
+      <workItem from="1711021223419" duration="1609000" />
+      <workItem from="1711022854789" duration="1942000" />
+      <workItem from="1711025018686" duration="1444000" />
+      <workItem from="1711100790214" duration="836000" />
+      <workItem from="1711101781717" duration="18000" />
+      <workItem from="1711101843120" duration="8000" />
+      <workItem from="1711101919612" duration="2000" />
+      <workItem from="1711101950586" duration="538000" />
+      <workItem from="1711125591047" duration="6467000" />
+      <workItem from="1711133914925" duration="3157000" />
+      <workItem from="1711139121453" duration="4821000" />
+      <workItem from="1711176148336" duration="2147000" />
+      <workItem from="1711178516192" duration="1231000" />
+      <workItem from="1711179764373" duration="221000" />
+      <workItem from="1711180001620" duration="5199000" />
+      <workItem from="1711188438374" duration="2361000" />
+      <workItem from="1711193448833" duration="1089000" />
+      <workItem from="1711262258910" duration="11473000" />
+      <workItem from="1711275517776" duration="1228000" />
+      <workItem from="1711276975024" duration="1070000" />
+      <workItem from="1711287532508" duration="1476000" />
+      <workItem from="1711289435115" duration="112000" />
+      <workItem from="1711289704054" duration="1282000" />
+      <workItem from="1711386727297" duration="66000" />
+      <workItem from="1711555758113" duration="139000" />
+      <workItem from="1711579940970" duration="12000" />
+      <workItem from="1712259712275" duration="20000" />
+    </task>
+    <task id="LOCAL-00001" summary="add proj">
+      <option name="closed" value="true" />
+      <created>1711289487150</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711289487150</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add proj" />
+    <option name="LAST_COMMIT_MESSAGE" value="add proj" />
+  </component>
+</project>
