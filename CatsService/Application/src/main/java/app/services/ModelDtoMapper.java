@@ -14,6 +14,8 @@ public class ModelDtoMapper implements IModelDtoMapper {
         dto.setId(owner.getId());
         dto.setName(owner.getName());
         dto.setBirthDate(owner.getBirthDate());
+        dto.setRole(owner.getRole());
+        dto.setPassword(owner.getPassword());
 
         return dto;
     }

@@ -1,3 +1,163 @@
+POST http://localhost:8080/login
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=F32081CBB8373E71510D0ACE8DEB76D1
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+username=dima&password=pass
+
+###
+
+POST http://localhost:8080/lab3/owners/create
+Content-Type: application/json
+Content-Length: 91
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=C388AA03E71E22A698AE75BD30DE78AA
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "dima3",
+  "birthDate": "1990-05-15",
+  "password": "pass",
+  "role": "admin"
+}
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=C388AA03E71E22A698AE75BD30DE78AA
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+username=alina&password=1
+
+###
+
+POST http://localhost:8080/lab3/owners/create
+Content-Type: application/json
+Content-Length: 91
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=AE7B8FDECF86D3F3452D43A9A48792E8
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "dima2",
+  "birthDate": "1990-05-15",
+  "password": "pass",
+  "role": "admin"
+}
+
+<> 2024-04-12T192010.200.json
+
+###
+
+GET http://localhost:8080/lab3/owners
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=AE7B8FDECF86D3F3452D43A9A48792E8
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-04-12T191853.200.json
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=AE7B8FDECF86D3F3452D43A9A48792E8
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+username=dima&password=pass
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=33798E47859A898CF33D4AEA74BF7676
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+username=dima&password=pass
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=6D96B9C0C2DD2C604305466ED3BEC35B
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+username=dima&password=pass
+
+###
+
+POST http://localhost:8080/lab3/owners/create
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=B6C9E38973F043B636018C5BEE2161F5
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-04-12T191507.200.html
+
+###
+
+# @no-redirect
+GET http://localhost:8080/lab3/owners
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=B6C9E38973F043B636018C5BEE2161F5
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/lab3/owners
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=B6C9E38973F043B636018C5BEE2161F5
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-04-12T191330.200.html
+
+###
+
+GET http://localhost:8080/lab3/owners/create
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=B6C9E38973F043B636018C5BEE2161F5
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-04-12T191311.200.html
+
+###
+
+GET http://localhost:8080/lab3/owners
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=B6C9E38973F043B636018C5BEE2161F5
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-04-12T191200.200.html
+
+###
+
+GET http://localhost:8080/lab3/owners
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=B6C9E38973F043B636018C5BEE2161F5
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-04-12T191138.200.html
+
+###
+
 GET http://localhost:8080/lab3/owners/all
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)

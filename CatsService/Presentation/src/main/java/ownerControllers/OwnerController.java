@@ -1,54 +1,48 @@
-package ownerHandlers;
+package ownerControllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import contracts.owners.IOwnerService;
-import lombok.SneakyThrows;
+import lombok.AllArgsConstructor;
 import models.cats.CatDto;
 import models.operations.OperationResult;
 import models.owners.OwnerDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@AllArgsConstructor
 @RequestMapping("/lab3/owners")
-public class OwnerHandler {
+public class OwnerController {
     private final IOwnerService ownerService;
 
-    @Autowired
-    public OwnerHandler(IOwnerService ownerService) {
-        this.ownerService = ownerService;
-    }
-
     @GetMapping
+    @PreAuthorize("hasAuthority('admin')")
     public ResponseEntity<List<OwnerDto>> getAllOwners() {
         return ResponseEntity.ok(ownerService.getAllOwners());
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('admin')")
     public ResponseEntity<OwnerDto> getOwnerById(@PathVariable Long id) {
         return ResponseEntity.ok(ownerService.findOwnerById(id));
     }
 
     @GetMapping("catList/{id}")
+    @PreAuthorize("hasAuthority('admin')")
     public ResponseEntity<List<CatDto>> getOwnerCats(@PathVariable Long id) {
         return ResponseEntity.ok(ownerService.getCatListById(id));
     }
 
-    @SneakyThrows
-    @PostMapping("/createOwner")
-    public ResponseEntity<OwnerDto> createOwner(@RequestBody String ownerData) {
-        ObjectMapper objectMapper = new ObjectMapper();
-        OwnerDto ownerDto = objectMapper.readValue(ownerData, OwnerDto.class);
-
-        return ResponseEntity.ok(ownerService.createOwner(
-                ownerDto.getName(),
-                ownerDto.getBirthDate()));
+    @PostMapping("/create")
+    @PreAuthorize("hasAuthority('admin')")
+    public ResponseEntity<OwnerDto> createOwner(@RequestBody OwnerDto owner) {
+        return ResponseEntity.ok(ownerService.createOwner(owner));
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('admin')")
     public ResponseEntity<OperationResult> deleteOwnerById(@PathVariable Long id) {
         return ResponseEntity.ok(ownerService.deleteOwner(id));
     }

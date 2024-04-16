@@ -1,12 +1,9 @@
-CREATE TYPE color AS ENUM(
-    'WHITE',
-    'BLACK'
-);
-
 CREATE TABLE IF NOT EXISTS owners(
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
-    birthdate DATE
+    birthdate DATE,
+    password TEXT,
+    role TEXT
 );
 
 CREATE TABLE IF NOT EXISTS cats(
@@ -14,7 +11,7 @@ CREATE TABLE IF NOT EXISTS cats(
     name TEXT NOT NULL,
     birthdate DATE,
     breed TEXT,
-    color color,
+    color TEXT,
     owner INTEGER REFERENCES owners(id)
 );
 
@@ -23,5 +20,3 @@ CREATE TABLE IF NOT EXISTS friends(
     second_id INTEGER REFERENCES cats(id) ON DELETE CASCADE,
     PRIMARY KEY (first_id, second_id)
 );
-
-CREATE CAST (character varying as color) WITH INOUT AS IMPLICIT;

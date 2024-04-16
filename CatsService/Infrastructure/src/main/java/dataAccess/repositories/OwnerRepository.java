@@ -22,7 +22,7 @@ public class OwnerRepository implements IOwnerRepository {
     }
 
     @Override
-    public Owner createOwner(String name, Date birthDate) {
+    public Owner createOwner(String name, Date birthDate, String password, String role) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
@@ -34,6 +34,8 @@ public class OwnerRepository implements IOwnerRepository {
         Owner owner = new Owner();
         owner.setBirthDate(birthDate);
         owner.setName(name);
+        owner.setPassword(password);
+        owner.setRole(role);
 
         entityManager.persist(owner);
 
@@ -52,6 +54,28 @@ public class OwnerRepository implements IOwnerRepository {
         Owner owner = entityManager.find(Owner.class, id);
         transaction.commit();
         entityManager.close();
+
+        return owner;
+    }
+
+    @Override
+    public Owner findOwnerByName(String name) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        Owner owner = null;
+
+        try {
+            transaction.begin();
+            Query query = entityManager.createNativeQuery("SELECT * FROM owners WHERE name = :name", Owner.class);
+            query.setParameter("name", name);
+            owner = (Owner) query.getSingleResult();
+            transaction.commit();
+        } catch (NoResultException e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            entityManager.close();
+        }
 
         return owner;
     }

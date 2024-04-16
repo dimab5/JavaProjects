@@ -1,0 +1,16 @@
+[
+  {
+    "id": 2,
+    "name": "dima",
+    "birthDate": "1990-05-14T20:00:00.000+00:00",
+    "password": "$2a$10$NPnPJDQeGYduyVPcl08Ay.BD1bFXiR8HMLQDANCyaGQeVE7MslZWy",
+    "role": "admin"
+  },
+  {
+    "id": 4,
+    "name": "alina",
+    "birthDate": "1990-05-14T20:00:00.000+00:00",
+    "password": "$2a$10$UF3druXNQUbIH1l86Fd/6.p3w.q6ToSxT7LLYQGlba9u39MEmTTIK",
+    "role": "user"
+  }
+]

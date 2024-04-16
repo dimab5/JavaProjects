@@ -21,9 +21,8 @@ public class Cat {
     private Date birthDate;
     private String breed;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "color", columnDefinition = "color")
-    private CatColor color;
+    @Column(name = "color")
+    private String color;
 
     @ManyToOne
     @JoinColumn(name = "owner")

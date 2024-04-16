@@ -11,8 +11,9 @@ import java.util.List;
 
 
 public interface IOwnerRepository {
-    Owner createOwner(String name, Date birthDate);
+    Owner createOwner(String name, Date birthDate, String password, String role);
     Owner findOwnerById(Long id);
+    Owner findOwnerByName(String name);
     List<Owner> getAllOwners();
     OperationResult becomeOwner(Owner owner, Cat cat);
     OperationResult deleteOwnerById(Long id);

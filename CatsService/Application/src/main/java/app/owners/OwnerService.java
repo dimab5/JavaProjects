@@ -3,33 +3,35 @@ package app.owners;
 import abstractions.repositories.IOwnerRepository;
 import app.services.IModelDtoMapper;
 import contracts.owners.IOwnerService;
+import lombok.AllArgsConstructor;
 import models.cats.Cat;
 import models.cats.CatDto;
 import models.operations.OperationResult;
 import models.owners.Owner;
 import models.owners.OwnerDto;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
 
 @Service
+@AllArgsConstructor
 public class OwnerService implements IOwnerService {
-    private final IOwnerRepository ownerRepository;
-    private final IModelDtoMapper mapper;
-
-    @Autowired
-    public OwnerService(IOwnerRepository ownerRepository, IModelDtoMapper mapper) {
-        this.ownerRepository = ownerRepository;
-        this.mapper = mapper;
-    }
+    private IOwnerRepository ownerRepository;
+    private IModelDtoMapper mapper;
+    private PasswordEncoder passwordEncoder;
 
     @Override
-    public OwnerDto createOwner(String name, Date birthDate) {
-        return mapper.ownerModelToDto(ownerRepository.createOwner(name, birthDate));
+    public OwnerDto createOwner(OwnerDto owner) {
+        owner.setPassword(passwordEncoder.encode(owner.getPassword()));
+
+        return mapper.ownerModelToDto(ownerRepository.createOwner(
+                owner.getName(),
+                owner.getBirthDate(),
+                owner.getPassword(),
+                owner.getRole()));
     }
 
     @Override

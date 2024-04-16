@@ -1,41 +1,37 @@
-package catHandlers;
+package catControllers;
 
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import contracts.cats.ICatService;
-import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
-import models.cats.CatColor;
+import lombok.AllArgsConstructor;
 import models.cats.CatDto;
 import models.operations.OperationResult;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/lab3/cats")
-@RequiredArgsConstructor
-public class CatHandler {
-    private final ICatService catService;
+@AllArgsConstructor
+public class CatController {
+    private ICatService catService;
 
     @GetMapping
+    @PreAuthorize("hasAuthority('admin') || hasAuthority('user')")
     public ResponseEntity<List<CatDto>> getAllCats() {
         return ResponseEntity.ok(catService.getAllCats());
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('admin') || hasAuthority('user')")
     public ResponseEntity<CatDto> getCatById(@PathVariable Long id) {
         return ResponseEntity.ok(catService.findCatById(id));
     }
 
-    @SneakyThrows
-    @PostMapping("/createCat")
-    public ResponseEntity<CatDto> createCat(@RequestBody String catData) {
-        ObjectMapper objectMapper = new ObjectMapper();
-        CatDto catDto = objectMapper.readValue(catData, CatDto.class);
-
+    @PostMapping("/create")
+    @PreAuthorize("hasAuthority('admin') || hasAuthority('user')")
+    public ResponseEntity<CatDto> createCat(@RequestBody CatDto catDto) {
         return ResponseEntity.ok(catService.createCat(
                 catDto.getName(),
                 catDto.getBirthDate(),
@@ -45,16 +41,19 @@ public class CatHandler {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('admin') || hasAuthority('user')")
     public ResponseEntity<OperationResult> deleteCatById(@PathVariable Long id) {
         return ResponseEntity.ok(catService.deleteCat(id));
     }
 
     @GetMapping("/getByColor/{color}")
-    public ResponseEntity<List<CatDto>> getCatsByColor(@PathVariable CatColor color) {
+    @PreAuthorize("hasAuthority('admin') || hasAuthority('user')")
+    public ResponseEntity<List<CatDto>> getCatsByColor(@PathVariable String color) {
         return ResponseEntity.ok(catService.findCatsByColor(color));
     }
 
     @PostMapping("/makeFriends/{firstCatId}/{secondCatId}")
+    @PreAuthorize("hasAuthority('admin') || hasAuthority('user')")
     public ResponseEntity<OperationResult> makeFriends(
             @PathVariable Long firstCatId,
             @PathVariable Long secondCatId) {

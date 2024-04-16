@@ -2,11 +2,12 @@ package dataAccess.repositories;
 
 import abstractions.repositories.ICatRepository;
 import models.cats.Cat;
-import models.cats.CatColor;
 import models.operations.OperationResult;
 import models.owners.Owner;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
@@ -24,7 +25,7 @@ public class CatRepository implements ICatRepository {
     }
 
     @Override
-    public Cat createCat(String name, Date birthDate, String breed, CatColor color, Owner owner) {
+    public Cat createCat(String name, Date birthDate, String breed, String color, Owner owner) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
@@ -89,13 +90,13 @@ public class CatRepository implements ICatRepository {
     }
 
     @Override
-    public List<Cat> findCatsByColor(CatColor color) {
+    public List<Cat> findCatsByColor(String color) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         TypedQuery<Cat> query = entityManager.createQuery(
-                "SELECT c FROM Cat c WHERE CAST(c.color AS string) = :color",
+                "SELECT c FROM Cat c WHERE c.color = :color",
                 Cat.class);
 
-        query.setParameter("color", color.name());
+        query.setParameter("color", color);
         return query.getResultList();
     }
 

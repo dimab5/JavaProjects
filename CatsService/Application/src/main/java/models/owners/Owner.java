@@ -18,8 +18,13 @@ public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(unique = true)
     private String name;
     private Date birthDate;
+
+    private String password;
+    private String role;
 
     @OneToMany(mappedBy = "owner")
     private List<Cat> cats = new ArrayList<>();

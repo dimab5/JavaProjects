@@ -11,6 +11,6 @@ public class CatDto {
     private String name;
     private Date birthDate;
     private String breed;
-    private CatColor color;
+    private String color;
     private Long ownerId;
 }

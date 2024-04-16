@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 public interface IOwnerService {
-    OwnerDto createOwner(String name, Date birthDate);
+    OwnerDto createOwner(OwnerDto owner);
     OwnerDto findOwnerById(Long id);
     List<CatDto> getCatListById(Long id);
     OperationResult becomeOwner(Owner owner, Cat cat);
